@@ -16,118 +16,123 @@ public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    @Column(name = "id")
-    private int id;
+    @Column(name = "idpa")
+    private int idpa;
 
-    @Column(name = "nombres")     
-    private String nombres;
+    @Column(name = "nombrespa")     
+    private String nombrespa;
 
-    @Column(name = "apellidos")
-    private String apellidos;
+    @Column(name = "apellidospa")
+    private String apellidospa;
 
-    @Column(name = "rut")
-    private String rut;
+    @Column(name = "rutpa")
+    private String rutpa;
 
-    @Column(name = "tel")
-    private String tel;
+    @Column(name = "telpa")
+    private String telpa;
 
-    @Column(name = "fechaNacimiento")
-    private String fechaNacimiento;
+    @Column(name = "fechanacimientopa")
+    private String fechaNacimientopa;
 
-    @Column(name = "correo")
-    private String correo;
+    @Column(name = "correopa")
+    private String correopa;
 
-    @Column(name = "direccion")
-    private String direccion;
+    @Column(name = "direccionpa")
+    private String direccionpa;
 
-     @Column(name = "comuna")
-    private String comuna;
+     @Column(name = "comunapa")
+    private String comunapa;
 
-    @Column(name = "ciudad")
-    private String ciudad;
+    @Column(name = "ciudadpa")
+    private String ciudadpa;
+
 
     
-
-    /*GET y SET*/
-
-    public int getId() {
-        return this.id;
+ /*GET y SET*/
+    public int getIdpa() {
+        return this.idpa;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdpa(int idpa) {
+        this.idpa = idpa;
     }
 
-    public String getNombres() {
-        return this.nombres;
+    public String getNombrespa() {
+        return this.nombrespa;
     }
 
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
+    public void setNombrespa(String nombrespa) {
+        this.nombrespa = nombrespa;
     }
 
-    public String getApellidos() {
-        return this.apellidos;
+    public String getApellidospa() {
+        return this.apellidospa;
     }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setApellidospa(String apellidospa) {
+        this.apellidospa = apellidospa;
     }
 
-    public String getRut() {
-        return this.rut;
+    public String getRutpa() {
+        return this.rutpa;
     }
 
-    public void setRut(String rut) {
-        this.rut = rut;
+    public void setRutpa(String rutpa) {
+        this.rutpa = rutpa;
     }
 
-    public String getTel() {
-        return this.tel;
+    public String getTelpa() {
+        return this.telpa;
     }
 
-    public void setTel(String tel) {
-        this.tel = tel;
+    public void setTelpa(String telpa) {
+        this.telpa = telpa;
     }
 
-    public String getFechaNacimiento() {
-        return this.fechaNacimiento;
+    public String getFechaNacimientopa() {
+        return this.fechaNacimientopa;
     }
 
-    public void setFechaNacimiento(String fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+    public void setFechaNacimientopa(String fechaNacimientopa) {
+        this.fechaNacimientopa = fechaNacimientopa;
     }
 
-    public String getCorreo() {
-        return this.correo;
+    public String getCorreopa() {
+        return this.correopa;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setCorreopa(String correopa) {
+        this.correopa = correopa;
     }
 
-    public String getDireccion() {
-        return this.direccion;
+    public String getDireccionpa() {
+        return this.direccionpa;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setDireccionpa(String direccionpa) {
+        this.direccionpa = direccionpa;
     }
 
-    public String getComuna() {
-        return this.comuna;
+    public String getComunapa() {
+        return this.comunapa;
     }
 
-    public void setComuna(String comuna) {
-        this.comuna = comuna;
+    public void setComunapa(String comunapa) {
+        this.comunapa = comunapa;
     }
 
-    public String getCiudad() {
-        return this.ciudad;
+    public String getCiudadpa() {
+        return this.ciudadpa;
     }
 
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
+    public void setCiudadpa(String ciudadpa) {
+        this.ciudadpa = ciudadpa;
     }
+    
+
+   
+
+
+    
 
 }
