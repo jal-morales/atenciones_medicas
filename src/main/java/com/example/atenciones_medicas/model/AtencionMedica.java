@@ -16,60 +16,72 @@ public class AtencionMedica {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name = "idam")
-    private int idAtencion;
+    private int idam;
     
     @Column(name = "diasnostcoam")
-    private String diasnostco;
+    private String diasnostcoam;
 
     @Column(name = "reposoam")
-    private boolean reposo;
+    private String reposoam;
 
-    @Column(name = "diasReposoam")
-    private int diasReposo;
+    @Column(name = "diasreposoam")
+    private int diasreposoam;
 
-    @Column(name = "fechaAtencionam")
-    private String fechaAtencion;
+    @Column(name = "fechaatencionam")
+    private String fechaAtencionam;
+
+    @Column(name = "idpa")
+    private int idpa;
 
     
 /*GET Y SET*/
-    public int getIdAtencion() {
-        return this.idAtencion;
-    }
 
-    public void setIdAtencion(int idAtencion) {
-        this.idAtencion = idAtencion;
-    }
+public int getIdam() {
+    return this.idam;
+}
 
-    public String getDiasnostco() {
-        return this.diasnostco;
-    }
+public void setIdam(int idam) {
+    this.idam = idam;
+}
 
-    public void setDiasnostco(String diasnostco) {
-        this.diasnostco = diasnostco;
-    }
+public String getDiasnostcoam() {
+    return this.diasnostcoam;
+}
 
-    public boolean isReposo() {
-        return this.reposo;
-    }
+public void setDiasnostcoam(String diasnostcoam) {
+    this.diasnostcoam = diasnostcoam;
+}
 
-    public void setReposo(boolean reposo) {
-        this.reposo = reposo;
-    }
+public String isReposoam() {
+    return this.reposoam;
+}
 
-    public int getDiasReposo() {
-        return this.diasReposo;
-    }
+public void setReposoam(String reposoam) {
+    this.reposoam = reposoam;
+}
 
-    public void setDiasReposo(int diasReposo) {
-        this.diasReposo = diasReposo;
-    }
+public int getDiasreposoam() {
+    return this.diasreposoam;
+}
 
-    public String getFechaAtencion() {
-        return this.fechaAtencion;
-    }
+public void setDiasReposoam(int diasreposoam) {
+    this.diasreposoam = diasreposoam;
+}
 
-    public void setFechaAtencion(String fechaAtencion) {
-        this.fechaAtencion = fechaAtencion;
-    }
+public String getFechaAtencionam() {
+    return this.fechaAtencionam;
+}
+
+public void setFechaAtencionam(String fechaAtencionam) {
+    this.fechaAtencionam = fechaAtencionam;
+}
+
+public int getIdpa() {
+    return this.idpa;
+}
+
+public void setIdpa(int idpa) {
+    this.idpa = idpa;
+}
 
 }

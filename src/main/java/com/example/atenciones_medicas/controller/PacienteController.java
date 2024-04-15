@@ -24,6 +24,7 @@ public class PacienteController {
 private PacienteService pacienteService;
 
 
+
 @GetMapping
 public List<Paciente> getAllRegistroUsuarios() {
     return pacienteService.getAllPaciente();
@@ -52,5 +53,8 @@ public  void deletePaciente(@PathVariable int id){
         new ResponseEntity<>("Error al eliminar la pelicula id:"+id,HttpStatus.BAD_REQUEST);  
     }     
 }
+
+
+
 
 }
