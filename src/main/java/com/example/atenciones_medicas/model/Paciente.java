@@ -1,10 +1,13 @@
 package com.example.atenciones_medicas.model;
 
+import java.util.List;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -45,6 +48,18 @@ public class Paciente {
 
     @Column(name = "ciudadpa")
     private String ciudadpa;
+
+    /*agregando join
+    @OneToMany(mappedBy = "paciente", fetch = FetchType.LAZY)
+    private List<AtencionMedica> atencionesMedicas;
+
+    public List<AtencionMedica> getAtencionesMedicas() {
+        return this.atencionesMedicas;
+    }
+
+    public void setAtencionesMedicas(List<AtencionMedica> atencionesMedicas) {
+        this.atencionesMedicas = atencionesMedicas;
+    }*/
 
 
     

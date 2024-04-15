@@ -2,9 +2,12 @@ package com.example.atenciones_medicas.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -32,6 +35,12 @@ public class AtencionMedica {
 
     @Column(name = "idpa")
     private int idpa;
+
+/*haciendo join
+@ManyToOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "idpa")
+private Paciente paciente;*/
+
 
     
 /*GET Y SET*/
@@ -83,5 +92,15 @@ public int getIdpa() {
 public void setIdpa(int idpa) {
     this.idpa = idpa;
 }
+
+/* 
+public Paciente getPaciente() {
+    return this.paciente;
+}
+
+public void setPaciente(Paciente paciente) {
+    this.paciente = paciente;
+}*/
+
 
 }

@@ -50,5 +50,10 @@ public Paciente  updatePaciente(int id_pa, Paciente paciente){
 public void deletePaciente(int id_pa){
     pacienteRepository.deleteById(id_pa);
 }
+/* 
+@Override
+public List<Paciente> getAllPacientesConAtenciones() {
+    return pacienteRepository.findAllWithAtencionesMedicas();
+}*/
 
 }

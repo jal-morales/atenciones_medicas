@@ -54,6 +54,11 @@ public  void deletePaciente(@PathVariable int id){
     }     
 }
 
+/*join
+@GetMapping("/pacientes-con-atenciones")
+public List<Paciente> listarPacientesConAtenciones() {
+    return pacienteService.getAllPacientesConAtenciones();
+}*/
 
 
 

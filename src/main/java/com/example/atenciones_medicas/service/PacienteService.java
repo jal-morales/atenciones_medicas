@@ -17,4 +17,7 @@ Paciente createPaciente(Paciente paciente);
 Paciente  updatePaciente(int id_pa, Paciente paciente);
 void deletePaciente(int id_pa);  
 
+/*join 
+List<Paciente> getAllPacientesConAtenciones();
+*/
 }
