@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 
 import jakarta.persistence.Table;
 
+
 @Entity
 @Table(name = "paciente")
 public class Paciente {
@@ -16,7 +17,7 @@ public class Paciente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name = "idpa")
-    private int idpa;
+    private int id_pa;
 
     @Column(name = "nombrespa")     
     private String nombrespa;
@@ -60,12 +61,12 @@ public class Paciente {
 
     
  /*GET y SET*/
-    public int getIdpa() {
-        return this.idpa;
+    public int getId_pa() {
+        return this.id_pa;
     }
 
-    public void setIdpa(int idpa) {
-        this.idpa = idpa;
+    public void setId_pa(int id_pa) {
+        this.id_pa = id_pa;
     }
 
     public String getNombrespa() {

@@ -55,7 +55,7 @@ public CollectionModel<EntityModel<Paciente>> getAllPaciente() {
 
     List<EntityModel<Paciente>> PacienteResourse = registroPacientes.stream()
             .map(registroPaciente -> EntityModel.of(registroPaciente, WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass())
-                    .getPacienteById(registroPaciente.getIdpa())).withSelfRel()))
+                    .getPacienteById(registroPaciente.getId_pa())).withSelfRel()))
             .collect(Collectors.toList());
 
     WebMvcLinkBuilder linkTo = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).getAllPaciente());
@@ -70,16 +70,16 @@ public CollectionModel<EntityModel<Paciente>> getAllPaciente() {
 
 /*Get Paciente */
 @GetMapping("/{id_pacientes}")
-public EntityModel<Paciente>  getPacienteById(@PathVariable("idpa") int idpa) {
+public EntityModel<Paciente>  getPacienteById(@PathVariable("id_pacientes") int id_pa) {
 
 
-    Optional<Paciente> registroPaciente = pacienteService.getPacienteById(idpa);
+    Optional<Paciente> registroPaciente = pacienteService.getPacienteById(id_pa);
     if (registroPaciente.isPresent()) {
         return EntityModel.of(registroPaciente.get(),
-            WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).getPacienteById(idpa)).withSelfRel(),
+            WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).getPacienteById(id_pa)).withSelfRel(),
             WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).getAllPaciente()).withRel("all-RegistroUsuario"));
     } else {
-        throw new PacienteNotFoundException("id paciente no existe: " + idpa);
+        throw new PacienteNotFoundException("id paciente no existe: " + id_pa);
     } 
 }
 
@@ -90,20 +90,20 @@ public Paciente createPaciente(@RequestBody Paciente paciente){
 
 
 @PutMapping("/{id}")
-public Paciente  updatePaciente(@PathVariable int idpa, @RequestBody Paciente paciente) {
+public Paciente  updatePaciente(@PathVariable int id_pa, @RequestBody Paciente paciente) {
     
-    return pacienteService.updatePaciente(idpa, paciente);
+    return pacienteService.updatePaciente(id_pa, paciente);
 }
 
 
 @DeleteMapping("/{id}")
-public  void deletePaciente(@PathVariable int idpa){
+public  void deletePaciente(@PathVariable int id_pa){
     
     try {
-        pacienteService.deletePaciente(idpa);
+        pacienteService.deletePaciente(id_pa);
         new ResponseEntity<>("Pelicula Eliminada Correctamente",HttpStatus.OK);     
     } catch (Exception e) {
-        new ResponseEntity<>("Error al eliminar la pelicula id:"+idpa,HttpStatus.BAD_REQUEST);  
+        new ResponseEntity<>("Error al eliminar la pelicula id:"+id_pa,HttpStatus.BAD_REQUEST);  
     }     
 }
 

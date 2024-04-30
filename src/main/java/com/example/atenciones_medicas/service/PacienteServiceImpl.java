@@ -22,9 +22,9 @@ public List<Paciente> getAllPaciente(){
 }
 
 @Override
-   public Optional<Paciente> getPacienteById(int idpa){
+   public Optional<Paciente> getPacienteById(int id_pa){
 
-    return pacienteRepository.findById(idpa);
+    return pacienteRepository.findById(id_pa);
    }
 
 @Override
@@ -35,9 +35,9 @@ public Paciente createPaciente(Paciente paciente)
 }
 
 @Override
-public Paciente  updatePaciente(int idpa, Paciente paciente){
-    if(pacienteRepository.existsById(idpa)){
-        paciente.setIdpa(idpa);
+public Paciente  updatePaciente(int id_pa, Paciente paciente){
+    if(pacienteRepository.existsById(id_pa)){
+        paciente.setId_pa(id_pa);
         return pacienteRepository.save(paciente);
     }
     else{
@@ -47,8 +47,8 @@ public Paciente  updatePaciente(int idpa, Paciente paciente){
 }
 
 @Override
-public void deletePaciente(int idpa){
-    pacienteRepository.deleteById(idpa);
+public void deletePaciente(int id_pa){
+    pacienteRepository.deleteById(id_pa);
 }
 /* 
 @Override
