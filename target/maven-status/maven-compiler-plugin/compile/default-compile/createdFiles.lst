@@ -1,0 +1,12 @@
+com\example\atenciones_medicas\model\AtencionMedica.class
+com\example\atenciones_medicas\controller\AtencionMedicaController.class
+com\example\atenciones_medicas\service\AtencionMedicaImpl.class
+com\example\atenciones_medicas\controller\PacienteController.class
+com\example\atenciones_medicas\AtencionesMedicasApplication.class
+com\example\atenciones_medicas\repository\PacienteRepository.class
+com\example\atenciones_medicas\model\Paciente.class
+com\example\atenciones_medicas\service\AtencionMedicaService.class
+com\example\atenciones_medicas\repository\AtencionMedicaRepository.class
+com\example\atenciones_medicas\service\PacienteService.class
+com\example\atenciones_medicas\controller\PacienteNotFoundException.class
+com\example\atenciones_medicas\service\PacienteServiceImpl.class

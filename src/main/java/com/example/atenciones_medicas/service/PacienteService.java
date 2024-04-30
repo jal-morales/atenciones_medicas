@@ -9,13 +9,13 @@ public interface PacienteService {
     
 
     List<Paciente> getAllPaciente();
-    Optional <Paciente> getPacienteById(int id_pa);
+    Optional <Paciente> getPacienteById(int idpa);
 
 /*CREAR*/
 
 Paciente createPaciente(Paciente paciente);
-Paciente  updatePaciente(int id_pa, Paciente paciente);
-void deletePaciente(int id_pa);  
+Paciente  updatePaciente(int idpa, Paciente paciente);
+void deletePaciente(int idpa);  
 
 /*join 
 List<Paciente> getAllPacientesConAtenciones();
