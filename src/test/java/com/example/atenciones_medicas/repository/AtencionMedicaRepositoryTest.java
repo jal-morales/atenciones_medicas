@@ -23,11 +23,11 @@ public class AtencionMedicaRepositoryTest {
       
         AtencionMedica atencionMedica = new AtencionMedica();
         /*Aca seteamos datos del paciente  */
-        atencionMedica.setDiasReposoam(18);;
+        atencionMedica.setDiasnostcoam("refriado");
    
    
         
         AtencionMedica resultado = atencionMedicaRepository.save(atencionMedica);
-        assertEquals(18, resultado.getDiasreposoam());
+        assertEquals(18, resultado.getDiasnostcoam());
     } 
 }
