@@ -101,9 +101,9 @@ public  void deletePaciente(@PathVariable int id_pa){
     
     try {
         pacienteService.deletePaciente(id_pa);
-        new ResponseEntity<>("Pelicula Eliminada Correctamente",HttpStatus.OK);     
+        new ResponseEntity<>("paciente Eliminada Correctamente",HttpStatus.OK);     
     } catch (Exception e) {
-        new ResponseEntity<>("Error al eliminar la pelicula id:"+id_pa,HttpStatus.BAD_REQUEST);  
+        new ResponseEntity<>("Error al eliminar el paciente id:"+id_pa,HttpStatus.BAD_REQUEST);  
     }     
 }
 
